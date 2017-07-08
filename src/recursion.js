@@ -3,11 +3,31 @@
 const nFibonacci = (n) => {
   // fibonacci sequence: 1 2 3 5 8 13 ...
   // return the nth number in the sequence
+  if (n === 1 || n === 0) return 1;
+  return nFibonacci(n - 1) + nFibonacci(n - 2);
 };
+
+// ------------------------------------------- print fibonacci sequence up to n
+// const nFibonacci = (n) => {
+//   // fibonacci sequence: 1 2 3 5 8 13 ...
+//   // return the nth number in the sequence
+//   if (n === 1) return [0, 1]; // return 1;
+//   let fibSeq = nFibonacci(n - 1);
+//   //console.log(fibSeq);
+//
+//   fibSeq.push(fibSeq[fibSeq.length - 1] + fibSeq[fibSeq.length - 2])
+//   //console.log(fibSeq)
+//   return fibSeq;
+// // return nFibonacci(n - 1) + nFibonacci(n - 2);
+// };
+//
+// console.log(nFibonacci(8));
 
 const nFactorial = (n) => {
   // factorial example: !5 = 5 * 4 * 3 * 2 * 1
   // return the factorial of `n`
+  if (n === 1) return 1;
+  return nFactorial(n - 1) * n;
 };
 
 const checkMatchingLeaves = (obj) => {
